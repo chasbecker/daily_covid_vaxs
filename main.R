@@ -1,3 +1,8 @@
+# A simplistic look at what America needs to do
+# to maintain a vaccination rate in the face of
+# fading immunity and booster shots.
+# c.l.becker@outlook.com  /// github/chasbecker
+
 library(tidyverse)
 rm(list=ls())
 
