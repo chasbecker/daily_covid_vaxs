@@ -10,12 +10,11 @@ usa_daily <- daily %>%
              select( date, new_vaccinations_smoothed_per_million )
 
 
-plot_daily <- ggplot(data = usa_daily, mapping = aes( x = date, y = new_vaccinations_smoothed_per_million )) +
+plot_daily <- ggplot(data = usa_daily, aes( x = as.Date(date), y = new_vaccinations_smoothed_per_million )) +
               geom_point() +
               labs( title = "Daily Covid Vaxs") +
               xlab("Date") +
-              ylab("Per Million") +
-              theme(axis.text.x = element_text(angle=90))
+              ylab("Per Million")
 #show the plot
 plot_daily
 
