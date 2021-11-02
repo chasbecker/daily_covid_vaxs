@@ -17,7 +17,6 @@ usa_daily <- daily %>%
              filter( iso_code=="USA" & !is.na(new_vaccinations_smoothed_per_million) ) %>%
              select( date, new_vaccinations_smoothed_per_million )
 
-
 plot_daily <- ggplot(data = usa_daily, aes( x = as.Date(date), y = new_vaccinations_smoothed_per_million )) +
               geom_point() +
               labs( title = "Daily Covid Vaxs") +
